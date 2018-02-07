@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("NancyFx.SSVE.Extender")]
-[assembly: AssemblyCopyright("Copyright ©  2018")]
+[assembly: AssemblyCopyright("Copyright © 2018, Gabor Keve (SmartProcess.hu)")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
