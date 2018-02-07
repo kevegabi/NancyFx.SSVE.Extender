@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2024
+VisualStudioVersion = 15.0.27130.2027
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NancyFx.SSVE.Extender", "NancyFx.SSVE.Extender\NancyFx.SSVE.Extender.csproj", "{88BB5E29-16FA-4B88-AFE1-6A69E801A4D5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nancy.SSVE.Extender", "Nancy.SSVE.Extender\Nancy.SSVE.Extender.csproj", "{88BB5E29-16FA-4B88-AFE1-6A69E801A4D5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

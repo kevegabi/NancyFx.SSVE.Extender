@@ -2,7 +2,7 @@
 using System;
 using System.Text.RegularExpressions;
 
-namespace NancyFx.SSVE.Extender
+namespace Nancy.SSVE.Extender
 {
     public sealed class EqualTokenViewEngineMatcher : ISuperSimpleViewEngineMatcher
     {
