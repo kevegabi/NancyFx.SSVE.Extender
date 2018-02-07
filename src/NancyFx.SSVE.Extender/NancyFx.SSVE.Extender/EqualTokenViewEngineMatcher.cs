@@ -4,7 +4,7 @@ using System.Text.RegularExpressions;
 
 namespace NancyFx.SSVE.Extender
 {
-    internal sealed class EqualTokenViewEngineMatcher : ISuperSimpleViewEngineMatcher
+    public sealed class EqualTokenViewEngineMatcher : ISuperSimpleViewEngineMatcher
     {
         private static readonly Regex EqualSubstitutionsRegEx;
 
