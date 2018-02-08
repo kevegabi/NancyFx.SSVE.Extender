@@ -6,12 +6,7 @@ namespace Nancy.SSVE.Extender
 {
     public sealed class EqualTokenViewEngineMatcher : ISuperSimpleViewEngineMatcher
     {
-        private static readonly Regex EqualSubstitutionsRegEx;
-
-        static EqualTokenViewEngineMatcher()
-        {
-            EqualSubstitutionsRegEx = new Regex(@"@Equal(?<Not>Not)?\.(?<LeftItem>[a-zA-Z0-9-_]+)?[\|](?<RightItem>[a-zA-Z0-9-_]+)?[\|](?<ResultItem>[a-zA-Z0-9-_]+)?", RegexOptions.Compiled);
-        }
+        private static readonly Regex EqualSubstitutionsRegEx = new Regex(@"@Equal(?<Not>Not)?\.(?<LeftItem>[a-zA-Z0-9-_]+)?[\|](?<RightItem>[a-zA-Z0-9-_]+)?[\|](?<ResultItem>[a-zA-Z0-9-_]+);?", RegexOptions.Compiled);
 
         public string Invoke(string content, dynamic model, IViewEngineHost host)
         {
@@ -34,11 +29,11 @@ namespace Nancy.SSVE.Extender
                         {
                             return ResultItem;
                         };
-                        return "";
+                        return "[ERR]";
                     }
                     else
                     {
-                        return "";
+                        return "[ERR]";
                     }
                 });
         }
