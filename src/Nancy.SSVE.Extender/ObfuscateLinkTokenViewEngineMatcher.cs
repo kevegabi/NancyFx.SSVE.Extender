@@ -7,7 +7,7 @@ namespace Nancy.SSVE.Extender
 {
     public sealed class ObfuscateLinkTokenViewEngineMatcher : ISuperSimpleViewEngineMatcher
     {
-        private static readonly Regex AntiForgeryTokenRegEx = new Regex(@"@ObfuscateLink?\.(?<PlainLink>[a-zA-Z0-9-_]+);?", RegexOptions.Compiled);
+        private static readonly Regex AntiForgeryTokenRegEx = new Regex(@"@ObfuscateLink?\.(?<PlainLink>[a-zA-Z0-9-_\@\.]+);?", RegexOptions.Compiled);
 
         public string Invoke(string content, dynamic model, IViewEngineHost host)
         {
