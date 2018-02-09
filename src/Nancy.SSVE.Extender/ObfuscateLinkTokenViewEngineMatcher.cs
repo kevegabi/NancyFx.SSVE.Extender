@@ -7,11 +7,13 @@ namespace Nancy.SSVE.Extender
 {
     public sealed class ObfuscateLinkTokenViewEngineMatcher : ISuperSimpleViewEngineMatcher
     {
-        private static readonly Regex AntiForgeryTokenRegEx = new Regex(@"@ObfuscateLink?\.(?<PlainLink>[a-zA-Z0-9-_\@\.]+);?", RegexOptions.Compiled);
+        private static readonly Regex ObfuscateLinkTokenRegEx = new Regex(@"@ObfuscateLink?\.(?<PlainLink>[a-zA-Z0-9-_\@\.\:\\\/]+);?", RegexOptions.Compiled);
+        //private static readonly Regex ObfuscateLinkTokenRegEx = new Regex(@"@ObfuscateLink?\.(?<PlainLink>[^;]+);?", RegexOptions.Compiled);
+        
 
         public string Invoke(string content, dynamic model, IViewEngineHost host)
         {
-            return AntiForgeryTokenRegEx.Replace(
+            return ObfuscateLinkTokenRegEx.Replace(
                 content,
                 m =>
                 {
@@ -27,6 +29,11 @@ namespace Nancy.SSVE.Extender
                 });
         }
 
+        /// <summary>
+        /// Does the obfuscate.
+        /// </summary>
+        /// <param name="referenceString">The reference string.</param>
+        /// <returns>Obfuscated string</returns>
         private string DoObfuscate(string referenceString)
         {
             Random rnd = new Random(101);
